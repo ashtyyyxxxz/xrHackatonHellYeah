@@ -22,7 +22,7 @@ public class Dialogue : MonoBehaviour
 
     private Animator animator;
     private bool inZone;
-    private int currentLine;
+    public int currentLine;
 
     [Header("Events")]
     public UnityEvent onNextDialogue;
@@ -93,8 +93,6 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        currentLine = 0;
-
         StopAllCoroutines();
         StartCoroutine(StartDialogueRoutine());
         if (dialogueLines[currentLine].clip != null)

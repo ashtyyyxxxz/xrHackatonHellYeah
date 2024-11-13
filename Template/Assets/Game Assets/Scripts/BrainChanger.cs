@@ -18,12 +18,14 @@ public class BrainChanger : MonoBehaviour
             case 1:
                 
                 dialogue.dialogueLines = brainLines;
+                dialogue.currentLine = 0;
                 dialogue.StartDialogue();
                 break;
 
             case 2:
                 
                 dialogue.dialogueLines = neuronLines;
+                dialogue.currentLine = 0;
                 dialogue.StartDialogue();
                 break;
         }
