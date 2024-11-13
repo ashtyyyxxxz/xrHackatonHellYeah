@@ -488,8 +488,9 @@ Transform:
   - {fileID: 6451767201620914534}
   - {fileID: 2086423302042541176}
   - {fileID: 1997947656865815534}
+  - {fileID: 2947071186191399709}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3701958114912175730
 GameObject:
@@ -567,6 +568,63 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4075660857180095342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2947071186191399709}
+  - component: {fileID: 7624463847485789021}
+  m_Layer: 0
+  m_Name: Brain Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2947071186191399709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075660857180095342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1585779003789175927}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7624463847485789021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075660857180095342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d8ab6474a657c4eaba60608485d602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 2721994937787185204}
+  brainLines:
+  - line: "\u0410\u0417\u0412\u0410\u0417\u0412\u0410\u0417\u0412\u0410\u0417\u0412\u0410\u0417\u0417
+      \u041C\u041E\u0417\u0413"
+    clip: {fileID: 0}
+  - line: "\u043F\u0440\u0430\u0441\u0442\u0435 \u043F\u0435\u0436\u0435"
+    clip: {fileID: 0}
+  neuronLines:
+  - line: "\u042F \u0440\u044B\u0431\u0430 \u044F \u0440\u044B\u0431\u0430"
+    clip: {fileID: 0}
+  brainPartsToGlow:
+  - {fileID: 4318830843217281108}
+  - {fileID: 5556158846550324933}
 --- !u!1 &4111967577875254687
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +887,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7624463847485789021}
         m_TargetAssemblyTypeName: BrainChanger, Assembly-CSharp
         m_MethodName: ChangeBrainModel
         m_Mode: 0
@@ -1867,3 +1925,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 527440211074314714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2721994937787185204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2492654341389814254, guid: 46028c54251afd14aa09d50dcd48ce56,
+    type: 3}
+  m_PrefabInstance: {fileID: 527440211074314714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c3ca931609da6428d97223c26ebf8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
