@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,7 +9,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider))]
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] private DialogueLine[] dialogueLines;
+    public DialogueLine[] dialogueLines;
     [SerializeField] private float dialogueShowCharCd = 0.07f;
 
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -90,13 +91,17 @@ public class Dialogue : MonoBehaviour
         onPrevDialogue?.Invoke();
     }
 
-    private void StartDialogue()
+    public void StartDialogue()
     {
+        currentLine = 0;
+
         StopAllCoroutines();
         StartCoroutine(StartDialogueRoutine());
-
-        speechSource.clip = dialogueLines[currentLine].clip;
-        speechSource.Play();
+        if (dialogueLines[currentLine].clip != null)
+        {
+            speechSource.clip = dialogueLines[currentLine].clip;
+            speechSource.Play();
+        }
     }
 
     private IEnumerator StartDialogueRoutine()
