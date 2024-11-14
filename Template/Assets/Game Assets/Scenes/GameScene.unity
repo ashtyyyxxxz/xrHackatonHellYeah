@@ -3541,6 +3541,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7319016499889922982, guid: 155f912f3d3ff0c46ad4b41db2ac6572,
         type: 3}
+      propertyPath: m_SmoothPosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319016499889922982, guid: 155f912f3d3ff0c46ad4b41db2ac6572,
+        type: 3}
+      propertyPath: m_SmoothRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319016499889922982, guid: 155f912f3d3ff0c46ad4b41db2ac6572,
+        type: 3}
       propertyPath: m_UseDynamicAttach
       value: 1
       objectReference: {fileID: 0}
